@@ -6,6 +6,8 @@ from table import pretty_table, typer_style
 
 
 class Customer:
+    def __init__(self):
+        self.cust_id = 'guest'
 
     def new_customer(self):
         '''Mendaftarkan / menambah  customer baru'''
