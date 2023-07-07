@@ -11,7 +11,7 @@ from table import pretty_table, typer_style
 class Cashier(Customer):
     def __init__(self):
         self.transaction_date = date.today()
-        self.cust_id = 'guest'
+        super().__init__()
         self.transaction_id = self.transaction()
         self.keranjang_belanja_total = []
         self.total_belanja = 0
