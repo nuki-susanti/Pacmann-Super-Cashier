@@ -11,7 +11,7 @@ A client needed an automated cashier system for his supermarket. Generally, the 
 
 Client’s request has minimum requirements, such as adding items, updating item name and quantities and deleting items. However, I decided to go further and develop solutions beyond what is requested.
 
-I connect the system with MySQL database. For this purpose, free version of online MySQL database environment is used which is provided by Railway.app. In order to interact with database, simple SQL scripts of CRUD (Create, Read, Update and Delete) are used. Lastly, the app with which system admin as well as customers interact are developed with python in the form of CLI (Command Line Interface).
+I connect the system with MySQL database. For this purpose, free version of online MySQL database environment is used which is provided by [Railway.app](https://firstsiteguide.com/what-is-rotating-proxy/](https://railway.app/new))</i>. In order to interact with database, simple SQL scripts of CRUD (Create, Read, Update and Delete) are used. Lastly, the app with which system admin as well as customers interact are developed with python in the form of CLI (Command Line Interface).
 
 Below is the simple table schema developed for this purpose.
 
