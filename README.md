@@ -1,8 +1,6 @@
 # Pacmann-Super-Cashier
 This is python-based project to develop self-cashier program for fictious supermarket.
 
-To start the program, the command is: <b>"python main.py"</b>
-
 ## Problem Background
 
 A client needed an automated cashier system for his supermarket. Generally, the system allows customers of his supermarket to serve themselves, just like in an offline supermarket.
@@ -11,17 +9,43 @@ A client needed an automated cashier system for his supermarket. Generally, the 
 
 Client’s request has minimum requirements, such as adding items, updating item name and quantities and deleting items. However, I decided to go further and develop solutions beyond what is requested.
 
-I connect the system with MySQL database. For this purpose, free version of online MySQL database environment is used which is provided by [Railway.app](https://firstsiteguide.com/what-is-rotating-proxy/](https://railway.app/new))</i>. In order to interact with database, simple SQL scripts of CRUD (Create, Read, Update and Delete) are used. Lastly, the app with which system admin as well as customers interact are developed with python in the form of CLI (Command Line Interface).
+I connect the system with MySQL database. For this purpose, free version of online MySQL database environment is used which is provided by [Railway.app](https://firstsiteguide.com/what-is-rotating-proxy/](https://railway.app/new))</i>. In order to interact with database, simple SQL scripts of are implemented. Lastly, the app with which system admin as well as customers interact are developed with python in the form of CLI (Command Line Interface).
 
 Below is the simple table schema developed for this purpose.
 
 <img src="image/schema.png" width="500">
 
+## Modules Description
+
+1. Module "db.py" contains functions and SQL script of Data Manipulation Languange (DML) to do CRUD operation.
+2. Module "ddl.sql" contains simple SQL script of Data definition language (DDL), which include schema and tables.
+3. Module "dataseed.py" contains initial data to populate database on the first initialization.
+4. Module "transaksi.py" contains Cashier class which defines functions for transaction process carried out by customers.
+5. Module "customer.py" contains Customer class which defines function for customer login/sign-up process. This is also a parent class of Trasaksi class.
+6. Module "admin.py" contains Admin class which defines functions for transaction process carried out by system admin.
+7. Module "helper.py" contains helping functions, such as function to convert tuple to list and list to tuple.
+8. Module "table.py" contains function to sytle visualization table and output message.
+9. Module "main.py" contains main page of the program and also function to run the program.
+
 ## Flowchart
 
 <img src="image/flowchart.png">
 
-## Features
+## How to use it?
+
+1. Create free MySQL database environment at [Railway.app](https://firstsiteguide.com/what-is-rotating-proxy/](https://railway.app/new))</i> which is free for 24hr.
+2. Create ".env" file or just input connection credentials given by Railway.app in the module "db.py". You get those connection credential from the Railway.app page once you create your environment. 
+
+<img src="image/railway.png" width="300">
+
+This will be automatically erased by Railway.app every 24hr, so I don’t have any concern sharing it here.
+
+<img src="image/credential_railway.app.png" width="300">
+
+3. To start the program, the command is: <b>"python main.py"</b>.
+4. The program could not be run before initializing database/database table (see below how to initialize the database).
+
+## Features & Test Case
 
 In general, the app is categorized based on its users, namely system admin and normal customer. However, I didn’t implement system admin verification for the sake of simplicity.
 
@@ -29,15 +53,7 @@ In general, the app is categorized based on its users, namely system admin and n
 
 #### 1. Initialize tables in the database by inputting “00”
    
-Beforehand, you have to input your temporary credential of MySQL environment, as shown below. This will be automatically erased by Railway.app every 24hr, so I don’t have any concern sharing it here.
-
-<img src="image/credential_railway.app.png" width="300">
-
-You get those connection credential from the Railway.app page once you create your environment.
-
-<img src="image/railway.png" width="300">
-
-The app could not be run before initializing database/database table. Thus, at the very first run, you have to input ‘’00’’ in the app in order to set-up MySQL database environment and populate the table with initial data.
+The program could not be run before initializing database/database table. Thus, at the very first run, you have to input ‘’00’’ in the app in order to set-up MySQL database environment and populate the table with initial data.
 
 <img src="image/00.png">
 
