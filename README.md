@@ -11,7 +11,7 @@ Client’s request has minimum requirements, such as adding items, updating item
 
 I connect the system with MySQL database. For this purpose, free version of online MySQL database environment is used which is provided by [Railway.app](https://firstsiteguide.com/what-is-rotating-proxy/](https://railway.app/new))</i>. In order to interact with database, simple SQL scripts of are implemented. Lastly, the app with which system admin as well as customers interact are developed with python in the form of CLI (Command Line Interface).
 
-Below is the simple table schema developed for this purpose.
+Below is the simple ERD (Entity Relationship Diagram) developed for this purpose.
 
 <img src="image/schema.png" width="500">
 
